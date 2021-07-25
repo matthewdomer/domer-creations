@@ -1,12 +1,17 @@
-/*
- * Welcome to your app's main JavaScript file!
- *
- * We recommend including the built version of this JavaScript file
- * (and its CSS file) in your base layout (base.html.twig).
- */
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
+import AppBarMain from "./components/AppBarMain";
+import drive from "./images/drive.jpg";
 
-// any CSS you import will output into a single css file (app.css in this case)
-import './styles/app.css';
+class App extends Component {
+    render() {
+        return (
+            <div style={{backgroundImage: drive}}>
+                <AppBarMain/>
+                Matt likes to do stuff and that's what America is all about.
+            </div>
+        );
+    }
+}
 
-// start the Stimulus application
-import './bootstrap';
+ReactDOM.render(<App/>, document.getElementById("root"));
